@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Range</title>
+  <style>
+    #content{
+      /* border:5px solid black; */
+      padding: 20px;
+    }
+    #inputRange{
+      width: 60%;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    GLOBAL CONTENT----
+                      >
+                      >
+
+  -->
+
+  <!-- 
+    change if else -> switch
+   -->
+  <label>
+    happiness level
+    <input 
+    id="inputRange"
+    value="3"
+    type="range"
+    min="1"
+    max="5" 
+    
+    oninput="
+      let hapLev = inputRange.value
+      switch(hapLev) {
+        case '1': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Whining-icon.png' /> ` 
+        break;
+
+        case '2': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Sadness-icon.png' /> ` 
+        break;
+
+        case '3': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Sadistic-icon.png' /> ` 
+        break;
+
+        case '4': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Happy-icon.png' /> ` 
+        break;
+
+        case '5': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Glad-icon.png' /> ` 
+        break;
+      }
+    "
+    >
+</label>
+
+
+  <span id="content">
+    <img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Sadistic-icon.png' />
+    <!-- 
+        .innerHTML
+     -->
+
+  </span>
+
+
+  <!-- <script>
+
+if (hapLev == 1) {
+        content.innerHTML = 
+        `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Whining-icon.png' />`
+      } else  if (hapLev == 2) {
+        content.innerHTML = 
+        `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Sadness-icon.png' />`
+      } else  if (hapLev == 3) {
+        content.innerHTML = 
+        `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Sadistic-icon.png' />`
+      } else  if (hapLev == 4) {
+        content.innerHTML = 
+        `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Happy-icon.png' />`
+      } else  if (hapLev == 5) {
+        content.innerHTML = 
+        `<img src='https://icons.iconarchive.com/icons/designbolts/emoji/48/Emoji-Glad-icon.png' />`
+      }  
+       
+
+  </script>
+   -->
+
+
+</body>
+</html>
