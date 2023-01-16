@@ -1,0 +1,104 @@
+<!-- 
+    Sentiment Estimator
+
+    html:
+        -semantics
+        -identification
+        -inputs
+    
+    JS:
+        -string
+        -conditionals
+        -functions
+        -dom access basics
+        -dom events basics
+        -dom manipulation basics
+
+        
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentiment Estimator</title>
+    <style>
+        #textfield{
+            padding: 1em;
+            border-radius: 2em;
+        }
+
+        #icon{
+            transform: translateY(.6em);
+            margin-left: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sentiment Estimator</h1>
+    <div>
+        <input 
+            id="textfield" 
+            type="text"
+            placeholder="enter sentiment here"
+            value=""
+
+            onkeyup="checkSentiment()"
+        />
+
+        <img 
+            id="icon" 
+            src="icons/Help-icon.png" alt=""
+        >
+
+
+    </div>
+
+    <script>
+
+        function checkSentiment () {
+
+            //FUNCTION ALGORITM
+
+            //1.reads the value from the input
+            let phrase = textfield.value
+            //2.compares to referenced values
+            if (phrase.trim().toLowerCase() =='love' || 
+                phrase.trim().toLowerCase() == 'like it' || 
+                phrase.trim().toLowerCase() == 'i love it') {
+                //3.sets the corresponding image
+                icon.src ="icons/Heart-icon.png"
+            } else if (phrase.trim().toLowerCase()  =='happy' || 
+                phrase.trim().toLowerCase() == 'joy' || 
+                phrase.trim().toLowerCase() == ':)') {
+                //3.sets the corresponding image
+                icon.src ="icons/Emotes-face-smile-big-icon.png"
+            } else if (phrase.trim().toLowerCase()  == 'sad' || 
+                phrase.trim().toLowerCase() == 'upset' || 
+                phrase.trim().toLowerCase() == '(((') {
+                icon.src ="icons/Emotes-face-sad-icon.png"
+            } else if (phrase.trim().toLowerCase()  == 'cute' || 
+                phrase.trim().toLowerCase() == 'nice' || 
+                phrase.trim().toLowerCase() == 'sweet') {
+                icon.src ="icons/Emoji-Cute-icon.png"
+            } else if (phrase.trim().toLowerCase()  =='uncertain' || 
+                phrase.trim().toLowerCase() == 'unsafe' || 
+                phrase.trim().toLowerCase() == 'doubt' ) {
+                icon.src="icons/Emotes-face-uncertain-icon.png"
+            } else {
+                icon.src = "icons/Help-icon.png"
+            }
+            
+
+            console.log("Checking Sentiment...")
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+body{
+    background-color: #333;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #111;
+}
+
+button{
+    width: 70px;
+    height: 20px;
+    font-family: 'Franklin Gothic Medium';
+    background-color: aliceblue;
+    
+    border-radius: 20px;
+}
+
+button.red{
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+}
+
+button.red:hover{
+    background-color: red;
+    color: white;
+}
+button.blue{
+    background-color: white;
+    border: 2px solid blue;
+    color: blue;
+}
+
+button.blue:hover{
+    background-color: blue;
+    color: white;
+}
+button.yellow{
+    background-color: white;
+    border: 2px solid yellow;
+    color: yellow;
+}
+
+button.yellow:hover{
+    background-color: yellow;
+    color: white;
+}

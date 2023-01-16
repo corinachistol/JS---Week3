@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Box</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--
+         JS: 
+            -external script
+            -event binding (basics)
+            -functions
+            -DOM (basics)
+            -Template string (basics)
+            -environment variables
+
+
+         EVENTS:
+
+            USER ---------> ACTION------------> BROWSER
+                                                    |
+                                                event
+                                                    |
+                                                    |
+                                                    |
+                                                    |
+                                                    |
+                JS <--------capture<----------registry --->CSS:hover, :active, :focus
+                |                                                          |
+                |                                                          |
+                |                                                          |                                    
+                callback (reaction)                                       dynamic style (reaction) 
+
+                
+     -->  <br> <br>
+            <!-- 
+            <tag on<eventName>="Js code ">....</tag>
+            -->
+      
+
+            <button onclick="increase()">
+                 <!-- local variables, sunt valabile aici in cutiuta doar. Asa tip de cod e mai comod cind vrei sa faci elemente dinamice interactice. Codul se ruleaza doar atunci cind e clickat . Dar asa tip de cod, nu arata bine. Se asemana cu stilul inline CSS  -->
+             
+            
+            +
+            </button>
+            <button onclick="decrease()">          
+            -
+            </button>
+
+            <button class="red" onclick="red()">RED</button>
+            <button class="blue" onclick="blue()">BLUE</button>
+            <button class="yellow" onclick="yellow()">YELLOW</button> 
+
+
+            <div id="container">
+
+                <div class="box"></div>
+
+            </div>
+
+
+            <script>
+                // global variables
+                let x = 10;
+            </script>
+
+            
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
