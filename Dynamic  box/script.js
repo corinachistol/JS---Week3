@@ -1,8 +1,7 @@
 //global variable
 let size = 100  //number
-let color1 = red
-let color2 = blue
-let color3 = yellow
+let color = "black"
+
 
 
 
@@ -13,7 +12,7 @@ function showBox(){
       style="
          width:${size}px;
          height:${size}px;
-         background-color:red;
+         background-color:${color};
       "
       ></div>
 
@@ -36,26 +35,26 @@ function decrease(){
 }
 
 
-function red() {
-  //let color = red
-   console.log(color1)
+function changeRed() {
+   color = "red"
    showBox()
+   console.log(color)
    
 }
 
 
-function blue(){
-   let color = blue
-   console.log(color)
+function changeBlue(){
+   color = "blue"
    showBox()
+   console.log(color)
 
 }
 
 
-function yellow(){
-   //let color = yellow
-   console.log(`${color3}`)
+function changeYellow(){
+   color = "yellow"
    showBox()
+   console.log(color)
 }
 
 
